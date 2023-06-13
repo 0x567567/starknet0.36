@@ -13,3 +13,5 @@ function getTokenBalance(walletAddress, contractAddress, network) {
   let rpcLink = RPC_MAP[network];
   if (!rpcLink) {
     return "Error: Invalid Network Name";
+ const result = JSON.parse(UrlFetchApp.fetch(api_url));
+    const nonce = result["result"]["committed"]["nonce"];
